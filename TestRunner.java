@@ -1,0 +1,21 @@
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class TestRunner{
+  public static void main(String[] args){
+    Result result = JUnitCore.runClasses(Testcase.class);
+    if(!result.wasSuccessful())
+    {
+      System.out.println("There is" + result.getFailureCount()+ " failure over"
+                        + result.getRunCount() + " tests case");
+      for(Failure failure : result.getFailures()){
+          System.out.println(failure.toString());
+      }
+    }
+    else{
+      System.out.println(" All test Pass");
+      System.out.println(" Run time: " + result.getRunTime() + " ms");
+    }
+  }
+}
