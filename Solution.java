@@ -6,7 +6,7 @@ class Solution{
     int startIdx = 0;
     while (startIdx < array.length -1 ){
       int smallestIdx = startIdx;
-      for (int i = startIdx + 1; i < array.legth - 1; i++){
+      for (int i = startIdx + 1; i < array.length ; i++){
         if (array[smallestIdx] > array[i]){
           smallestIdx=i;
         }
