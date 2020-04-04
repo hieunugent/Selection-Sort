@@ -7,7 +7,7 @@ public class TestRunner{
     Result result = JUnitCore.runClasses(Testcase.class);
     if(!result.wasSuccessful())
     {
-      System.out.println("There is" + result.getFailureCount()+ " failure over"
+      System.out.println("There is " + result.getFailureCount()+ " failure over "
                         + result.getRunCount() + " tests case");
       for(Failure failure : result.getFailures()){
           System.out.println(failure.toString());
